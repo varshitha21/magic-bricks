@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Title{% endblock %}
+
+{% block content  %}
+<div class="container">
+    <!-- Added your content -->
+
+    <h5 class="text-center">boys pg</h5>
+
+    <div class="row">
+
+        {% for product in products %}
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{boyspg.image}}" alt="" height="150" />
+                <h5>Name: {{boyspg.name}} </h5>
+                <p>price: {{boyspg.price}}</p>
+                <p>address: {{boyspg.address}}</p>
+                <a href="/view/{{boyspg.id}}" class="btn btn-success">Visit</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    <!-- Added your Javascript code -->
+</script>
+{% endblock %} 
